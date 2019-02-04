@@ -21,7 +21,7 @@ def load_TSP(file_name):
 
 
 def save_LON(V, E, A, n, file_name):
-    # problem: A - adjacency matrix with weights, n - dimensions
+    # graph: A - adjacency matrix with weights, n - dimensions
     # landscape: V - optima vertices, E - escape edges
     with open(file_name, "wb") as fh:
         pickle.dump((V, E, A, n), fh)
@@ -119,8 +119,7 @@ def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge ope
     return nodes_order_
 
 
-# LK
-# TODO check if ok
+# LK  # TODO check if ok
 def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
     def improve_path(path):
         g = -np.inf
@@ -152,7 +151,6 @@ def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
 
 
 ### data visualization
-
 
 def generate_image(V, E, A, n, out_file): # generate png image from graph file
     E_probs = get_edges_probs(V, E)
@@ -196,7 +194,7 @@ def generate_image(V, E, A, n, out_file): # generate png image from graph file
 
     igraph.summary(g)
     image = igraph.plot(g, **visual_style)
-    image.save('images/' + out_file + '.png')
+    image.save(out_file + '.png')
     print("image ", out_file)
 
 
@@ -212,13 +210,13 @@ def gen_sub_images(filename, T, s):
         generate_image(sub_file)
 
 
-# TODO probably IPython.display, needed for Jupyter Notebook
+# TODO probably IPython.display, function needed for Jupyter Notebook, needs checking
 def print_subs(filename, T, s):
     for t in range(T):
         out_filename = filename + "_" + str(s) + "_" + str(t) + ".png"
         print(out_filename)
-        img = Image(out_filename)  # TODO what's that?
-        display(img)  # TODO what's that?
+        img = Image(out_filename)
+        display(img)
 
 
 
@@ -270,21 +268,10 @@ def bfs(v, V, E):  #
     pass
 
 
-
-
-
-
-
-
-
 ### generate_metrics
 
 def generate_metrics(V, E, A, n, out_file):
     pass
-
-
-
-
 
 
 ### helpers
@@ -296,50 +283,57 @@ def generate_subinstances(A, n, out_file, amount, nodes_removed):
         save_TSP(A_, n_, sub_name)
 
 
-def random_subinstance(A, n, n_):  # TODO check, what's happening here?
+def random_subinstance(A, n, n_):
     picked_v = np.sort(np.random.choice(range(n), n_, replace=False))
-    return A[np.array(picked_v)[:,None], np.array(picked_v)], n_
+    return A[np.array(picked_v)[:,None], np.array(picked_v)], n_  # only selected rows & columns
 
 
 ### main
 
-def main_part1__generating_TSP_problems(tsp_filename):  # step 1  # input bays29.tsp
+def main_part1__generating_TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
     A, n = parse_TSP_from_file(tsp_filename)
     out_file = tsp_filename.split('.')[0]
 
-    save_TSP(A, n, "data/" + out_file)
-    generate_subinstances(A, n, "data/" + out_file, 9, 1)
-    generate_subinstances(A, n, "data/" + out_file, 9, 2)
-    generate_subinstances(A, n, "data/" + out_file, 10, 5)
+    save_TSP(A, n, instances_foldername + "/" + out_file)
+    generate_subinstances(A, n, instances_foldername + "/" + out_file, 9, 1)
+    generate_subinstances(A, n, instances_foldername + "/" + out_file, 9, 2)
+    generate_subinstances(A, n, instances_foldername + "/" + out_file, 10, 5)
 
 
-def main_part2__generating_LONs():
-    for filename in os.listdir('data'):
+def main_part2__generating_LONs(instances_foldername, lons_foldername):
+    for filename in os.listdir(instances_foldername):
         A, n = load_TSP(filename)
         out_file = filename.split('.')[0]
 
         L, E = generate_LON(A, n, 1000, 10000)
 
-        save_LON(L, E, A, n, "lons/" + out_file + ".g")
+        save_LON(L, E, A, n, lons_foldername + "/" + out_file + ".g")
         print("LON ", out_file)
 
 
-def main_part3__visualizing_LONs():
-    for filename in os.listdir('lons'):
+def main_part3__visualizing_LONs(lons_foldername, images_foldername):
+    for filename in os.listdir(lons_foldername):
         L, E, A, n = load_LON(filename)
         out_file = filename.split('.')[0]
 
-        generate_image(L, E, A, n, out_file)
+        generate_image(L, E, A, n, images_foldername + "/" + out_file)
 
 
-def main_part4__generating_metrics():
-    for filename in os.listdir('lons'):
+def main_part4__generating_metrics(lons_foldername, metrics_foldername):
+    for filename in os.listdir(lons_foldername):
         L, E, A, n = load_LON(filename)
         out_file = filename.split('.')[0]
 
-        generate_metrics(L, E, A, n, out_file)
+        generate_metrics(L, E, A, n, metrics_foldername + "/" + out_file)
 
 
+# main_part1__generating_TSP_problems("bays29.tsp", "data")
+# main_part2__generating_LONs("data", "lons")
+# main_part3__visualizing_LONs("lons", "images")
+# main_part4__generating_metrics("lons", "metrics")
+
+
+# prev
 # generate_image("bays29")
 # gen_sub_images("graphs/bays29", 9, 1)
 # gen_sub_images("graphs/bays29", 9, 2)
