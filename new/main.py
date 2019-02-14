@@ -61,6 +61,7 @@ def parse_TSP_from_file(filename):
 
 ### fitness landscape
 
+# TODO check during weekend 15-17.02
 def generate_LON(A, runs_amount, termination_criterion, kick_strength):  # LON sampling (Algorithm 1 from paper [1])
     T = runs_amount  # number of Chained-LK runs
     I = termination_criterion  # termination criterion of run
@@ -97,11 +98,12 @@ def generate_LON(A, runs_amount, termination_criterion, kick_strength):  # LON s
     return L, E, best_path_length, best_path, run_result[best_path_length], iters[best_path_length]/run_result[best_path_length]
 
 
+# TODO check during weekend 15-17.02
 def CLK(I, A, K):  # Iterated local search Chained-LK
     # intensification stage: Lin-Kernighan local search
     # diversification stage: double bridge (4-exchange perturbation)
 
-    def hashable_path(path):
+    def hashable_path(path):  # TODO unification - reversed order
         index = np.where(path == 0)[0][0]
         return tuple(np.roll(path, -index))
 
@@ -138,6 +140,7 @@ def path_length(p, A, n):
     return s
 
 
+# TODO check during weekend 15-17.02
 def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge operations are applied)
     def double_bridge(path):
         s = np.sort(np.random.choice(path.size, 3, replace=False))  # numpy.random.choice(int, sampleSize, copies?)
@@ -149,7 +152,7 @@ def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge ope
     return nodes_order_
 
 
-# LK  # TODO check if ok
+# TODO check during weekend 15-17.02
 def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
     def improve_path(path):
         g = -np.inf
@@ -228,43 +231,26 @@ def generate_image(V, E, A, n, out_file): # generate png image from graph file
     print("image ", out_file)
 
 
-# automated subinstances graph image files generation
-def gen_sub_images(filename, T, s):
+def gen_sub_images(filename, T, s): # automated subinstances graph image files generation
     for t in range(T):
         sub_file = filename + "_" + str(s) + "_" + str(t)
         generate_image(sub_file)
 
 
-def print_images(images_foldername):
-    strings = []
-    for filename in os.listdir(images_foldername):
-        strings.append("<div style='width: 50%; margin: 0px; float: left; border: 1px solid black;'>"
-                       "<img src='" + images_foldername + "/" + filename + "' /><span>" + filename + "</span></div>")
-    imagesHTML = ''.join(strings)
-    display(HTML(imagesHTML))
-
-
-    #for t in range(T):
-    #    out_filename = filename + "_" + str(s) + "_" + str(t) + ".png"
-    #    print(out_filename)
-    #    img = Image(out_filename)
-    #    display(img)
-
-        # display(HTML("<table><tr><td><img src='img1'></td><td><img src='img2'></td></tr></table>"))
-        # imagesList=''.join( ["<img style='width: 120px;' src='%s' />" % str(s)
-        #                      for s in sorted(glob('map_*.png')) ])
-        # display(HTML(imagesList))
-
-
-# graph parsing functions
-def adjacency_list(V, E):
+def adjacency_list(V, E, reversed_order=False):
     E_ = {}
     for s1, s2 in E:
-        if s1 in V and s2 in V:  # TODO why? any case it will be false?
-            if s1 in E_:
-                E_[s1].append(s2)
+        if s1 in V and s2 in V:  # TODO in my cases should never be false
+            if not reversed_order:
+                if s1 in E_:
+                    E_[s1].append(s2)
+                else:
+                    E_[s1] = [s2]
             else:
-                E_[s1] = [s2]
+                if s2 in E_:
+                    E_[s2].append(s1)
+                else:
+                    E_[s2] = [s1]
     return E_
 
 
@@ -302,15 +288,79 @@ def get_edges_probs(V, E):
 
 ### metrics
 
-def generate_network_metrics(V, E, A, n, out_file):
-    pass
+def generate_network_metrics(V, E, A, n, performance_metrics):
+    best_path_length, best_path, successes, mean_iters = performance_metrics
+
+    nodes = len(V) # number of nodes in LON
+
+    V_ = V.copy()
+    for (v1, _) in E.keys():
+        if v1 in V_:
+            V_.remove(v1)
+    sinks = len(V_) # number of sinks in LON
+
+    # TODO modification with incoming degree
+    outgoing = adjacency_list(V, E)
+    E_ = {} # edge weights
+    for v in outgoing.keys():
+        edges = 0
+        for v_ in outgoing[v]:
+            edges += E[(v, v_)]
+        for v_ in outgoing[v]:
+            E_[(v, v_)] = E[(v, v_)]/edges
+    incoming = adjacency_list(V, E, True)
+    in_strengths = {}
+    for v in V_: # foreach sink - weighted incoming degree
+        strength = 0
+        for v_ in incoming[v]:
+            strength += E_[(v_, v)]
+        in_strengths[v] = (path_length(v, A, n), strength)
+
+    optimal_length = math.inf
+    optimal_strength = 0
+    total_strength = 0
+    optimal_sinks = set()
+    for v, (length, strength) in in_strengths.items():
+        if length < optimal_length:
+            optimal_length = length
+            optimal_strength = strength
+            total_strength += strength
+            optimal_sinks = {v}
+        if length == optimal_length:
+            optimal_strength += strength
+            total_strength += strength
+            optimal_sinks.add(v)
+        else:
+            total_strength += strength
+    relative_in_strength = optimal_strength/total_strength  # relative in-strength of the globally optimal sink
+
+    S_ = optimal_sinks
+    incoming_ = incoming.copy()
+    while True:
+        S = S_.copy()
+        for v in S:
+            if v in incoming_.keys():
+                for v_ in incoming_[v]:
+                    S_.add(v_)
+                incoming_.pop(v)
+        if len(S) == len(S_):
+            break
+    nodes_in_optimal_funnels = len(S_)/nodes # proportion of nodes in the globally optimal funnels
+
+    # TODO something wrong
+    fitnesses = set()
+    for v in V:
+        fitnesses.add(path_length(v, A, n))
+    nodes_with_unique_path_length = len(fitnesses)/nodes # proportion of nodes with unique fitness value (path length)
+
+    return tuple([nodes, sinks, relative_in_strength, nodes_in_optimal_funnels, nodes_with_unique_path_length])
 
 
 def bfs(v, V, E):  #
     pass
 
 
-### LON projection
+### LON projection !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 def project_LON(V, E, A_, n_, nodes_array, out_file):  # TODO check
     V_ = set()
     E_1 = {}
@@ -359,6 +409,57 @@ def random_subinstance(A, n, n_):
     return A[np.array(picked_v)[:,None], np.array(picked_v)], n_, picked_v  # only selected rows & columns
 
 
+### notebook visualization
+
+def print_images(images_foldername):
+    strings = []
+    for filename in os.listdir(images_foldername):
+        strings.append("<div style='width: 45%; margin: 2.5%; float: left'>"
+                       "<img src='" + images_foldername + "/" + filename + "' /><span>" + filename + "</span></div>")
+    imagesHTML = ''.join(strings)
+    display(HTML(imagesHTML))
+
+
+def print_images_and_projections(images_foldername, projections_foldername):
+    strings = []
+    for filename in os.listdir(images_foldername):
+        strings.append("<div style='width: 45%; margin: 2.5%; float: left'>"
+                       "<img src='" + projections_foldername + "/" + filename + "' /><span>" + filename + " - projection</span></div>")
+        strings.append("<div style='width: 45%; margin: 2.5%; float: left'>"
+                       "<img src='" + images_foldername + "/" + filename + "' /><span>" + filename + " - LON</span></div>")
+    imagesHTML = ''.join(strings)
+    display(HTML(imagesHTML))
+
+
+def print_metrics(performance_metrics_foldername, network_metrics_foldername):
+    success_rate = []  # success rate
+    iters_to_success = []  # mean number of iterations to success
+    nodes = []  # number of nodes in LON
+    sinks = []  # number of sinks in LON
+    relative_in_strength = []  # relative in-strength of the globally optimal sink
+    nodes_in_optimal_funnels = []  # proportion of nodes in the globally optimal funnels
+    nodes_with_unique_path_length = []  # proportion of nodes with unique path length
+    for filename in os.listdir(performance_metrics_foldername):
+        performance_metrics = load_metrics(performance_metrics_foldername + "/" + filename)
+            # best_path_length, best_path, successes, mean_iters
+        network_metrics = load_metrics(network_metrics_foldername + "/" + filename)
+            # nodes, sinks, in_strength, nodes_in_optimal_funnels, nodes_with_unique_path_length
+        success_rate.append(performance_metrics[2]/1000)
+        iters_to_success.append(format(performance_metrics[3], '.2f'))
+        nodes.append(network_metrics[0])
+        sinks.append(network_metrics[1])
+        relative_in_strength.append(format(network_metrics[2], '.2f'))
+        nodes_in_optimal_funnels.append(format(network_metrics[3], '.2f'))
+        nodes_with_unique_path_length.append(format(network_metrics[4], '.2f'))
+
+    print("Success rate", success_rate)
+    print("Iterations to success", iters_to_success)
+    print("Number of nodes", nodes)
+    print("Number of sinks", sinks)
+    print("Relative in-strength", relative_in_strength)
+    print("Nodes in optimal funnels", nodes_in_optimal_funnels)
+    print("Nodes with unique path length", nodes_with_unique_path_length)
+
 ### main
 
 def main_part1__TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
@@ -390,12 +491,14 @@ def main_part3__images(lons_foldername, images_foldername):
         generate_image(L, E, A, n, images_foldername + "/" + out_file)
 
 
-def main_part4__metrics(lons_foldername, metrics_foldername):
+def main_part4__metrics(lons_foldername, performance_metrics_foldername, metrics_foldername):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
 
-        generate_network_metrics(L, E, A, n, metrics_foldername + "/" + out_file)
+        performance_metrics = load_metrics(performance_metrics_foldername + "/" + out_file + ".metrics")
+        network_metrics = generate_network_metrics(L, E, A, n, performance_metrics)
+        save_metrics(network_metrics, metrics_foldername + "/" + out_file + ".metrics")
 
 
 def main_part5__projections(lons_foldername, projections_foldername):
@@ -426,8 +529,4 @@ def main_part7__projection_metrics(projections_foldername, projection_metrics_fo
 # main_part4__metrics("1_bays29_1000/1_lons", "1_bays29_1000/4_network_metrics")
 # main_part5__projections("1_bays29_1000/1_lons", "1_bays29_1000/5_projections",
 #   "1_bays29_1000/6_projection_images")
-# ...
-
-
-
-main_part3__images("1_bays29_1000/1_lons", "1_bays29_1000/2_images")
+# main_part6 ...

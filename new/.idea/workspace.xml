@@ -2,100 +2,43 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccd7ec-e27e-4c06-99ed-e97e4084474f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/displaying_results.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_0.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_1.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_2.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_3.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_4.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_5.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_6.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_7.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_1_8.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_0.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_1.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_2.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_3.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_4.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_5.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_6.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_7.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_2_8.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_0.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_1.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_2.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_3.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_4.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_5.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_6.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_7.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_8.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_bays29_1000/4_network_metrics/bays29_5_9.metrics" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_1_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_2_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/bays29_5_9.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lons_termination1000/bays29_5_9.metrics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/displaying_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/displaying_results.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests.ipynb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../old/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../old/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -143,17 +86,18 @@
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.4" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.open.time.7" value="1" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="2915" />
+          <entry key="py" value="5791" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="2915" />
+          <entry key="Python" value="5791" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -173,25 +117,40 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="227" column="29" lean-forward="true" selection-start-line="227" selection-start-column="29" selection-end-line="227" selection-end-column="29" />
+            <state relative-caret-position="237">
+              <caret line="349" column="26" selection-start-line="349" selection-start-column="26" selection-end-line="349" selection-end-column="26" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
-                <element signature="e#239#329#0" />
-                <element signature="e#361#473#0" />
-                <element signature="e#530#732#0" />
-                <element signature="e#764#888#0" />
-                <element signature="e#939#1011#0" />
-                <element signature="e#1049#1151#0" />
-                <element signature="e#1191#1606#0" />
-                <element signature="e#4159#4267#0" />
-                <element signature="e#9267#9480#0" />
-                <element signature="e#9521#9693#0" />
-                <marker date="1550146115703" expanded="true" signature="9655:9660" ph="..." />
-                <marker date="1550146115703" expanded="true" signature="9655:10706" ph="..." />
-                <marker date="1550146115703" expanded="true" signature="10610:10706" ph="..." />
-                <marker date="1550146115703" expanded="true" signature="10695:10706" ph="..." />
-                <marker date="1550146115703" expanded="true" signature="11873:12386" ph="..." />
+                <element signature="e#245#335#0" />
+                <element signature="e#367#479#0" />
+                <element signature="e#536#738#0" />
+                <element signature="e#770#894#0" />
+                <element signature="e#945#1017#0" />
+                <element signature="e#1053#1155#0" />
+                <element signature="e#1197#1612#0" />
+                <element signature="e#1796#2997#0" />
+                <element signature="e#3095#4243#0" />
+                <element signature="e#4276#4384#0" />
+                <element signature="e#4529#4893#0" />
+                <element signature="e#5004#5862#0" />
+                <element signature="e#5972#7572#0" />
+                <element signature="e#7616#7725#0" />
+                <element signature="e#7860#8150#0" />
+                <element signature="e#8102#8339#0" />
+                <element signature="e#8384#8546#0" />
+                <element signature="e#8580#8884#0" />
+                <element signature="e#9646#9650#0" />
+                <element signature="e#9744#10590#0" />
+                <element signature="e#10743#10956#0" />
+                <element signature="e#10997#11169#0" />
+                <element signature="e#11241#11563#0" />
+                <element signature="e#11647#12188#0" />
+                <element signature="e#13985#15622#0" />
+                <element signature="e#14012#14471#0" />
+                <element signature="e#14562#15069#0" />
+                <element signature="e#15136#15371#0" />
+                <element signature="e#15472#15913#0" />
+                <marker date="1550180194756" expanded="true" signature="11269:11274" ph="..." />
               </folding>
             </state>
           </provider>
@@ -208,13 +167,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>improve_path</find>
-      <find>norm</find>
-      <find>plt</find>
-      <find>permutations</find>
-      <find>LON</find>
-      <find>load_</find>
-      <find>save_</find>
       <find>print_subs</find>
       <find>path_length</find>
       <find>gen_sub_images</find>
@@ -227,11 +179,24 @@
       <find>load_LON</find>
       <find>CLK</find>
       <find>generate_LON</find>
-      <find>metrics</find>
       <find>project_LON</find>
       <find>keys</find>
       <find>in E</find>
       <find>igraph</find>
+      <find>print</find>
+      <find>metrics</find>
+      <find>load_metrics</find>
+      <find>tuple</find>
+      <find>performance_metrics</find>
+      <find>[]</find>
+      <find>generate_network_metrics</find>
+      <find>save_metr</find>
+      <find>load_met</find>
+      <find>copy</find>
+      <find>adjacency_list</find>
+      <find>E[v</find>
+      <find>inf</find>
+      <find>nodes_in_optimal_funnels</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -281,21 +246,6 @@
             <path>
               <item name="new" type="b2602c69:ProjectViewProjectNode" />
               <item name="new" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
-              <item name="1_bays29_1000" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
-              <item name="2_bays29_10000" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
-              <item name="empty_folders" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -360,12 +310,12 @@
     <frame x="-6" y="-6" width="1613" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12604502" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12733118" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32884097" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32884097" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.49460918" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -386,18 +336,6 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>432</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/main.py</url>
-          <line>389</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-      </breakpoints>
       <default-breakpoints>
         <breakpoint type="python-exception">
           <properties notifyOnTerminate="true" exception="BaseException">
@@ -422,13 +360,7 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests.ipynb">
-      <provider selected="true" editor-type-id="ipnb-editor">
-        <state>
-          <selected id="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.ipynb" />
     <entry file="file://$PROJECT_DIR$/displaying_results.ipynb">
       <provider selected="true" editor-type-id="ipnb-editor">
         <state>
@@ -438,25 +370,40 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="227" column="29" lean-forward="true" selection-start-line="227" selection-start-column="29" selection-end-line="227" selection-end-column="29" />
+        <state relative-caret-position="237">
+          <caret line="349" column="26" selection-start-line="349" selection-start-column="26" selection-end-line="349" selection-end-column="26" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
-            <element signature="e#239#329#0" />
-            <element signature="e#361#473#0" />
-            <element signature="e#530#732#0" />
-            <element signature="e#764#888#0" />
-            <element signature="e#939#1011#0" />
-            <element signature="e#1049#1151#0" />
-            <element signature="e#1191#1606#0" />
-            <element signature="e#4159#4267#0" />
-            <element signature="e#9267#9480#0" />
-            <element signature="e#9521#9693#0" />
-            <marker date="1550146115703" expanded="true" signature="9655:9660" ph="..." />
-            <marker date="1550146115703" expanded="true" signature="9655:10706" ph="..." />
-            <marker date="1550146115703" expanded="true" signature="10610:10706" ph="..." />
-            <marker date="1550146115703" expanded="true" signature="10695:10706" ph="..." />
-            <marker date="1550146115703" expanded="true" signature="11873:12386" ph="..." />
+            <element signature="e#245#335#0" />
+            <element signature="e#367#479#0" />
+            <element signature="e#536#738#0" />
+            <element signature="e#770#894#0" />
+            <element signature="e#945#1017#0" />
+            <element signature="e#1053#1155#0" />
+            <element signature="e#1197#1612#0" />
+            <element signature="e#1796#2997#0" />
+            <element signature="e#3095#4243#0" />
+            <element signature="e#4276#4384#0" />
+            <element signature="e#4529#4893#0" />
+            <element signature="e#5004#5862#0" />
+            <element signature="e#5972#7572#0" />
+            <element signature="e#7616#7725#0" />
+            <element signature="e#7860#8150#0" />
+            <element signature="e#8102#8339#0" />
+            <element signature="e#8384#8546#0" />
+            <element signature="e#8580#8884#0" />
+            <element signature="e#9646#9650#0" />
+            <element signature="e#9744#10590#0" />
+            <element signature="e#10743#10956#0" />
+            <element signature="e#10997#11169#0" />
+            <element signature="e#11241#11563#0" />
+            <element signature="e#11647#12188#0" />
+            <element signature="e#13985#15622#0" />
+            <element signature="e#14012#14471#0" />
+            <element signature="e#14562#15069#0" />
+            <element signature="e#15136#15371#0" />
+            <element signature="e#15472#15913#0" />
+            <marker date="1550180194756" expanded="true" signature="11269:11274" ph="..." />
           </folding>
         </state>
       </provider>
