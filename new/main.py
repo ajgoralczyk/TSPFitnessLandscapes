@@ -3,7 +3,7 @@ import pickle
 from multiprocessing import Pool
 import time
 import igraph
-from IPython.display import Image, display
+from IPython.display import HTML, Image, display
 import os
 import math
 
@@ -198,7 +198,7 @@ def generate_image(V, E, A, n, out_file): # generate png image from graph file
                 Not_Sinks.add(s)
                 break
 
-    V_c = np.zeros(len(V_))
+    V_c = np.zeros(len(V_), dtype=object)
     for s, (i, r) in V_.items():
         V_c[i] = (s, r)
     E_ = [(V_[s1][0], V_[s2][0]) for s1, s2 in E if s1 in V_ and s2 in V_]
@@ -235,13 +235,25 @@ def gen_sub_images(filename, T, s):
         generate_image(sub_file)
 
 
-# TODO probably IPython.display, function needed for Jupyter Notebook, needs checking
-def print_subs(filename, T, s):
-    for t in range(T):
-        out_filename = filename + "_" + str(s) + "_" + str(t) + ".png"
-        print(out_filename)
-        img = Image(out_filename)
-        display(img)
+def print_images(images_foldername):
+    strings = []
+    for filename in os.listdir(images_foldername):
+        strings.append("<div style='width: 50%; margin: 0px; float: left; border: 1px solid black;'>"
+                       "<img src='" + images_foldername + "/" + filename + "' /><span>" + filename + "</span></div>")
+    imagesHTML = ''.join(strings)
+    display(HTML(imagesHTML))
+
+
+    #for t in range(T):
+    #    out_filename = filename + "_" + str(s) + "_" + str(t) + ".png"
+    #    print(out_filename)
+    #    img = Image(out_filename)
+    #    display(img)
+
+        # display(HTML("<table><tr><td><img src='img1'></td><td><img src='img2'></td></tr></table>"))
+        # imagesList=''.join( ["<img style='width: 120px;' src='%s' />" % str(s)
+        #                      for s in sorted(glob('map_*.png')) ])
+        # display(HTML(imagesList))
 
 
 # graph parsing functions
@@ -299,9 +311,39 @@ def bfs(v, V, E):  #
 
 
 ### LON projection
-def project_LON(V, E, A, n, out_file):
-    pass
+def project_LON(V, E, A_, n_, nodes_array, out_file):  # TODO check
+    V_ = set()
+    E_1 = {}
+    E_2 = {}
+    loops = 0
+    upstream_edges = 0
+    for v in V:
+        v_ = enumerate([node for node in v if node in nodes_array])
+        if v_ not in V_:
+            V_.add(v_)
 
+    for (v1, v2) in E.keys():
+        v1_ = enumerate([node for node in v1 if node in nodes_array])
+        v2_ = enumerate([node for node in v2 if node in nodes_array])
+        if (v1_, v2_) in E_1:
+            E_1[(v1_, v2_)] += E[(v1, v2)]
+        else:
+            E_1[(v1_, v2_)] = E[(v1, v2)]
+
+    for (v1, v2) in E_1.keys():  # E_2 without upstream_edges
+        if v1 == v2:  # loop
+            loops += 1
+        elif path_length(v2, A_, n_) > path_length(v1, A_, n_):
+            upstream_edges += 1
+        else:
+            E_2[(v1, v2)] = E_1[(v1, v2)]
+
+    return V_, E_1, E_2, loops, upstream_edges
+    #path_length(s, A, n)
+
+
+def generate_projection_metrics(L, E, A, n, foldername):
+    pass
 
 ### helpers
 
@@ -319,7 +361,7 @@ def random_subinstance(A, n, n_):
 
 ### main
 
-def main_part1__generating_TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
+def main_part1__TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
     A, n = parse_TSP_from_file(tsp_filename)
     out_file = tsp_filename.split('.')[0]
     nodes_array = list(range(n))
@@ -329,19 +371,18 @@ def main_part1__generating_TSP_problems(tsp_filename, instances_foldername):  # 
     generate_subinstances(A, n, instances_foldername + "/" + out_file, 10, 5)
 
 
-def main_part2__generating_LONs(instances_foldername, lons_foldername, K):
+def main_part2__LONs(instances_foldername, lons_foldername, metrics_foldername, K):
     for filename in os.listdir(instances_foldername):
         A, n, nodes_array = load_TSP(instances_foldername + "/" + filename)
         out_file = filename.split('.')[0]
 
-        # TODO paper [1] used 1000 Chained-LK runs and termination criterion: 10000 - decision needed
-        L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 100, 1000, K)
+        L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 1000, 10000, K)
         save_LON(L, E, A, n, nodes_array, lons_foldername + "/" + out_file + ".g")
-        save_metrics((best_path_length, best_path, successes, mean_iters), lons_foldername + "/" + out_file + ".metrics")
+        save_metrics((best_path_length, best_path, successes, mean_iters), metrics_foldername + "/" + out_file + ".metrics")
         print("LON ", out_file)
 
 
-def main_part3__visualizing_LONs(lons_foldername, images_foldername):
+def main_part3__images(lons_foldername, images_foldername):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
@@ -349,7 +390,7 @@ def main_part3__visualizing_LONs(lons_foldername, images_foldername):
         generate_image(L, E, A, n, images_foldername + "/" + out_file)
 
 
-def main_part4__generating_metrics(lons_foldername, metrics_foldername):
+def main_part4__metrics(lons_foldername, metrics_foldername):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
@@ -357,16 +398,36 @@ def main_part4__generating_metrics(lons_foldername, metrics_foldername):
         generate_network_metrics(L, E, A, n, metrics_foldername + "/" + out_file)
 
 
-def main_part5__project_LON_on_subinstance(lons_foldername, projections_foldername):
+def main_part5__projections(lons_foldername, projections_foldername):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
 
-        project_LON(L, E, A, n, projections_foldername + "/" + out_file)
+        project_LON(L, E, A, n, lons_foldername, projections_foldername + "/" + out_file)
+
+def main_part6__projection_images(projections_foldername, projection_images_foldername):
+    for filename in os.listdir(projections_foldername):
+        L, E, A, n, nodes_array = load_LON(projections_foldername + "/" + filename)
+        out_file = filename.split('.')[0]
+
+        generate_image(L, E, A, n, projection_images_foldername + "/" + out_file)
+
+def main_part7__projection_metrics(projections_foldername, projection_metrics_foldername):
+    for filename in os.listdir(projections_foldername):
+        L, E, A, n, nodes_array = load_LON(projections_foldername + "/" + filename)
+        out_file = filename.split('.')[0]
+
+        generate_projection_metrics(L, E, A, n, projection_metrics_foldername + "/" + out_file)
 
 
-# main_part1__generating_TSP_problems("bays29.tsp", "data")
-# main_part2__generating_LONs("data", "lons", 1)
-# main_part3__visualizing_LONs("lons", "images")
-# main_part4__generating_metrics("lons", "metrics")
-# main_part5__project_LON_on_subinstance("lons", "projections")
+# main_part1__TSP_problems("bays29.tsp", "data_bays29")
+# main_part2__LONs("data_bays29", "1_bays29_1000/1_lons", "1_bays29_1000/3_performance_metrics", 1)
+# main_part3__LON_images("1_bays29_1000/1_lons", "1_bays29_1000/2_images")
+# main_part4__metrics("1_bays29_1000/1_lons", "1_bays29_1000/4_network_metrics")
+# main_part5__projections("1_bays29_1000/1_lons", "1_bays29_1000/5_projections",
+#   "1_bays29_1000/6_projection_images")
+# ...
+
+
+
+main_part3__images("1_bays29_1000/1_lons", "1_bays29_1000/2_images")
