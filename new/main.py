@@ -1,6 +1,7 @@
 from fitness_landcape import *
 from visualization import *
 import os
+import datetime
 
 def main_part1__TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
     A, n = io.parse_TSP_from_file(tsp_filename)
@@ -14,12 +15,14 @@ def main_part1__TSP_problems(tsp_filename, instances_foldername):  # step 1  # i
 
 def main_part2__LONs(instances_foldername, lons_foldername, metrics_foldername, K):
     for filename in os.listdir(instances_foldername):
+        print("start", datetime.datetime.now())
         A, n, nodes_array = io.load_TSP(instances_foldername + "/" + filename)
         out_file = filename.split('.')[0]
 
         L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 1000, 10000, K)
         io.save_LON(L, E, A, n, nodes_array, lons_foldername + "/" + out_file + ".g")
         io.save_metrics((best_path_length, best_path, successes, mean_iters), metrics_foldername + "/" + out_file + ".metrics")
+        print("end", datetime.datetime.now())
         print("LON ", out_file)
 
 
@@ -83,3 +86,6 @@ def main_part7__projection_metrics(projections_foldername, projection_metrics_fo
 # main_part5__projections("1_bays29_1000/1_lons", "1_bays29_1000/5_projections",
 #   "1_bays29_1000/6_projection_images")
 # main_part6 ...
+
+# print(datetime.datetime.now())
+# main_part2__LONs("data_bays29", "2_bays29_10000/1_lons", "2_bays29_10000/3_performance_metrics", 1)

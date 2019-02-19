@@ -2,38 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccd7ec-e27e-4c06-99ed-e97e4084474f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/fitness_landcape.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/helpers.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_0.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_1.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_2.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_3.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_4.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_5.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_6.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_7.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/1_lons/bays29_1_8.g" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_0.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_1.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_2.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_3.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_4.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_5.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_6.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_7.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_bays29_10000/3_performance_metrics/bays29_1_8.metrics" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../visualization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_1_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_2_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_0.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_1.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_5.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_8.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_9.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_bays29_1000/2_images/bays29_5_9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/displaying_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/displaying_results.ipynb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -90,35 +81,35 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="6729" />
+          <entry key="py" value="6801" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="6729" />
+          <entry key="Python" value="6801" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="ipynb" value="4" />
-          <entry key="py" value="8" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IPNB" value="4" />
-          <entry key="Python" value="8" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            <state relative-caret-position="2112">
+              <caret line="88" selection-start-line="88" selection-end-line="88" />
               <folding>
                 <element signature="e#0#30#0" expanded="true" />
               </folding>
@@ -127,24 +118,24 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
+        <entry file="file://$PROJECT_DIR$/notebook.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="248">
-              <caret line="223" selection-start-line="223" selection-end-line="223" />
+            <state relative-caret-position="48">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding>
-                <element signature="e#0#32#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/in_out.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="120">
+              <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
               <folding>
-                <element signature="e#0#18#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -153,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/visualization.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
-              <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+            <state relative-caret-position="120">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -173,7 +164,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>load_TSP</find>
       <find>save_LON</find>
       <find>load_LON</find>
       <find>CLK</find>
@@ -203,6 +193,7 @@
       <find>gen_sub_images</find>
       <find>os</find>
       <find>bfs</find>
+      <find>time</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -393,12 +384,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
+    <entry file="file://$PROJECT_DIR$/in_out.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="223" selection-start-line="223" selection-end-line="223" />
+        <state relative-caret-position="48">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -406,17 +397,27 @@
     <entry file="file://$PROJECT_DIR$/notebook.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="48">
-          <caret line="2" column="19" lean-forward="true" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        <state relative-caret-position="120">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
           <folding>
             <element signature="e#0#13#0" expanded="true" />
           </folding>
@@ -425,20 +426,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        <state relative-caret-position="2112">
+          <caret line="88" selection-start-line="88" selection-end-line="88" />
           <folding>
             <element signature="e#0#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in_out.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
