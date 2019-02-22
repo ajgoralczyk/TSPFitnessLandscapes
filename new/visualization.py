@@ -4,6 +4,64 @@ import numpy as np
 
 ### data visualization
 
+def generate_projection_image(V, E, V_lon, E_lon, A, n, out_file, g_min=None):
+    E_probs = get_edges_probs(V, E)
+    E = set(E.keys())
+
+    print("projection nodes in LON", len(V & V_lon), " / ", len(V) )
+    print("projection edges in LON", len(E & set(E_lon.keys())), " / ", len(E))
+
+    results = sorted([path_length(s, A, n) for s in V])  # ascending
+    if not g_min:
+        g_min = results[0]
+    threshold = results[400]  # max number of nodes
+    V = {s for s in V if path_length(s, A, n) <= threshold}  # s - path
+    V_ = {s: (i, path_length(s, A, n)) for i, s in enumerate(V)}
+
+    Not_Sinks = set()
+    for s in V:  # TODO optimal?
+        for (v, u) in E:
+            if v == s:
+                Not_Sinks.add(s)
+                break
+
+    V_c = np.zeros(len(V_), dtype=object)
+    for s, (i, r) in V_.items():
+        V_c[i] = (s, r)
+    E_ = [(V_[s1][0], V_[s2][0]) for s1, s2 in E if s1 in V_ and s2 in V_]
+    E_size = [5 * E_probs[s1, s2] for s1, s2 in E if s1 in V_ and s2 in V_]  # TODO
+    pos_glob = find_pos_glob(V_, E, g_min, A, n)
+
+    g = igraph.Graph(directed=True)
+    g.add_vertices(len(V_))
+    g.add_edges(E_)
+
+    visual_style = {}
+    visual_style["layout"] = \
+        g.layout_fruchterman_reingold(maxiter=5000)
+    visual_style["vertex_color"] = ['red' if t[0] in pos_glob and t[0] in V_lon else
+                                    'pink' if t[0] in pos_glob and t[0] not in V_lon else
+                                    '#87CEFA' if t[0] not in V_lon else
+                                    'blue'
+                                    for t in V_c]
+    visual_style["vertex_frame_color"] = \
+        [visual_style["vertex_color"][i] if t[0] in Not_Sinks else 'black'
+         for i, t in enumerate(V_c)]
+    visual_style["vertex_frame_width"] = [2 for i in V_c]
+    visual_style["vertex_size"] = [10 if t[0] in Not_Sinks else 20 for t in V_c]
+    visual_style["edge_color"] = ['darkgrey' if e in set(E_lon.keys()) else
+                                  'lightgrey'
+                                  for e in E_]
+    visual_style["edge_width"] = E_size
+    visual_style["bbox"] = (0, 0, 1800, 1000)
+
+    igraph.summary(g)
+    image = igraph.plot(g, **visual_style)
+    image.save(out_file + '.png')
+    print("image ", out_file)
+    pass
+
+
 def generate_image(V, E, A, n, out_file, g_min=None): # generate png image from graph file
     E_probs = get_edges_probs(V, E)
     E = set(E.keys())

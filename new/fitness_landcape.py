@@ -2,7 +2,10 @@ from multiprocessing import Pool
 import time
 import math
 from visualization import *
-import in_out as io
+from in_out import *
+
+
+# from itertools import starmap
 
 
 ### fitness landscape
@@ -68,7 +71,7 @@ def CLK(I, A, K):  # Iterated local search Chained-LK
         p = intensify(p, A, n)
         p_res = path_length(p, A, n)
         i += 1
-        if p_res < s_res:
+        if p_res <= s_res:
             L.add(hashable_path(p))  # adding hashable object
             e = (hashable_path(s), hashable_path(p))
             if e in E:
@@ -82,7 +85,6 @@ def CLK(I, A, K):  # Iterated local search Chained-LK
     return s_res, s, total_iters, L, E
 
 
-# TODO check during weekend 15-17.02
 def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge operations are applied)
     def double_bridge(path):
         s = np.sort(np.random.choice(path.size, 3, replace=False))  # numpy.random.choice(int, sampleSize, copies?)
@@ -94,7 +96,7 @@ def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge ope
     return nodes_order_
 
 
-# TODO check during weekend 15-17.02
+# TODO Lin-Kernighan heuristic - check
 def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
     def improve_path(path):
         g = -np.inf
@@ -112,7 +114,7 @@ def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
     ind_score = path_length(ind, A, n)
     while improvement:
         improvement = False
-        for i in range(ind.size):
+        for i in range(ind.size): # TODO why range?
             res = improve_path(ind)
             if res is not None:
                 res_score = path_length(res, A, n)
@@ -130,12 +132,14 @@ def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
 def generate_network_metrics(V, E, A, n, performance_metrics):
     best_path_length, best_path, successes, mean_iters = performance_metrics
 
-    nodes = len(V) # number of nodes in LON
+    nodes_sum = len(V) # number of nodes in LON
+
+    edges_sum = len(E.items())  # number of nodes in LON
 
     V_ = V.copy()
     for (v1, _) in E.keys():
         if v1 in V_:
-            V_.remove(v1)
+             V_.remove(v1)
     sinks = len(V_) # number of sinks in LON
 
     # TODO modification with incoming degree
@@ -165,7 +169,7 @@ def generate_network_metrics(V, E, A, n, performance_metrics):
             optimal_strength = strength
             total_strength += strength
             optimal_sinks = {v}
-        if length == optimal_length:
+        elif length == optimal_length:
             optimal_strength += strength
             total_strength += strength
             optimal_sinks.add(v)
@@ -184,21 +188,22 @@ def generate_network_metrics(V, E, A, n, performance_metrics):
                 incoming_.pop(v)
         if len(S) == len(S_):
             break
-    nodes_in_optimal_funnels = len(S_)/nodes # proportion of nodes in the globally optimal funnels
+    nodes_in_optimal_funnels = len(S_)/nodes_sum # proportion of nodes in the globally optimal funnels
 
     fitnesses = set()
     for v in V:
         fitnesses.add(path_length(v, A, n))
-    nodes_with_unique_path_length = len(fitnesses)/nodes # proportion of nodes with unique fitness value (path length)
+    nodes_with_unique_path_length = len(fitnesses)/nodes_sum # proportion of nodes with unique fitness value (path length)
 
-    return tuple([nodes, sinks, relative_in_strength, nodes_in_optimal_funnels, nodes_with_unique_path_length])
+    return tuple([nodes_sum, edges_sum, sinks, relative_in_strength, nodes_in_optimal_funnels, nodes_with_unique_path_length])
 
 
 ### LON projection !
 def project_LON(V, E, A_, n_, nodes_array):  # TODO check
     V_ = set()
     E_1 = {}
-    E_2 = {}
+    E_2 = {}  # without loops, without upstream edges
+    E_3 = {}  # without loops, with reversed upstream edges
     loops = 0
     upstream_edges = 0
     for v in V:
@@ -219,11 +224,13 @@ def project_LON(V, E, A_, n_, nodes_array):  # TODO check
             loops += 1
         elif path_length(v2, A_, n_) > path_length(v1, A_, n_):
             upstream_edges += 1
+            E_3[(v2, v1)] = E_1[(v1, v2)]
         else:
             E_2[(v1, v2)] = E_1[(v1, v2)]
+            E_3[(v1, v2)] = E_1[(v1, v2)]
 
     print('loops', loops, 'upstream edges', upstream_edges)
-    return V_, E_1, E_2, loops, upstream_edges
+    return V_, E_1, E_2, E_3, loops, upstream_edges
 
 
 def generate_projection_metrics(L, E, A, n, foldername):
@@ -235,7 +242,7 @@ def generate_subinstances(A, n, out_file, amount, nodes_removed):
     for t in range(amount):
         A_, n_, nodes_array = random_subinstance(A, n, n-nodes_removed)
         sub_name = out_file + "_" + str(nodes_removed) + "_" + str(t)
-        io.save_TSP(A_, n_, nodes_array, sub_name)
+        save_TSP(A_, n_, nodes_array, sub_name)
 
 
 def random_subinstance(A, n, n_):
