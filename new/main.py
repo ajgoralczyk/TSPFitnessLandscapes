@@ -80,7 +80,7 @@ def main_part7__projection_metrics(projections_foldername, projection_metrics_fo
 
 
 # main_part1__TSP_problems("bays29.tsp", "data_bays29")
-main_part2__LONs("data_bays29", "test/1_lons", "test/3_performance_metrics", 1)
+# main_part2__LONs("data_bays29", "test/1_lons", "test/3_performance_metrics", 1)
 # main_part3__LON_images("1_bays29_1000/1_lons", "1_bays29_1000/2_images")
 # TODO main_part4__metrics("best", "test/1_lons", "test/3_performance_metrics", "test/4_network_metrics")
 # main_part5__projections("1_bays29_1000/1_lons", "1_bays29_1000/5_projections",

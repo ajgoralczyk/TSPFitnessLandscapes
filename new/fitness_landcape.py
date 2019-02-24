@@ -3,14 +3,10 @@ import time
 import math
 from visualization import *
 from in_out import *
-
-
+from lin_kernighan import optimise_path
 # from itertools import starmap
 
 
-### fitness landscape
-
-# TODO check during weekend 15-17.02
 def generate_LON(A, runs_amount, termination_criterion, kick_strength):  # LON sampling (Algorithm 1 from paper [1])
     T = runs_amount  # number of Chained-LK runs
     I = termination_criterion  # termination criterion of run
@@ -47,7 +43,6 @@ def generate_LON(A, runs_amount, termination_criterion, kick_strength):  # LON s
     return L, E, best_path_length, best_path, run_result[best_path_length], iters[best_path_length]/run_result[best_path_length]
 
 
-# TODO check during weekend 15-17.02
 def CLK(I, A, K):  # Iterated local search Chained-LK
     # intensification stage: Lin-Kernighan local search
     # diversification stage: double bridge (4-exchange perturbation)
@@ -68,7 +63,7 @@ def CLK(I, A, K):  # Iterated local search Chained-LK
     total_iters = 0
     while i < I:
         p = perturbate(s, K)  # K double-bridge operations
-        p = intensify(p, A, n)
+        p = optimise_path(p, A, n)
         p_res = path_length(p, A, n)
         i += 1
         if p_res <= s_res:
@@ -97,38 +92,37 @@ def perturbate(nodes_order, K):  # K - kick strength (how many double-bridge ope
 
 
 # TODO Lin-Kernighan heuristic - check
-def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
-    def improve_path(path):
-        g = -np.inf
-        best_j = 0
-        for j in range(path.size - 1):
-            g_ = A[path[j], path[j + 1]] - A[path[j], path[-1]]
-            if g_ > g:
-                g = g_
-                best_j = j
-        if g <= 0:
-            return None
-        return np.hstack([path[:best_j], np.flipud(path[best_j:])])  # TODO ...?
-
-    improvement = True
-    ind_score = path_length(ind, A, n)
-    while improvement:
-        improvement = False
-        for i in range(ind.size): # TODO why range?
-            res = improve_path(ind)
-            if res is not None:
-                res_score = path_length(res, A, n)
-                if res_score < ind_score:
-                    ind = res
-                    ind_score = res_score
-                    improvement = True
-                    break
-            ind = np.roll(ind, -1)
-    return ind
+# def intensify(ind, A, n):  # ind - path, A - matrix, n - dimension
+#     def improve_path(path):
+#         g = -np.inf
+#         best_j = 0
+#         for j in range(path.size - 1):
+#             g_ = A[path[j], path[j + 1]] - A[path[j], path[-1]]
+#             if g_ > g:
+#                 g = g_
+#                 best_j = j
+#         if g <= 0:
+#             return None
+#         return np.hstack([path[:best_j], np.flipud(path[best_j:])])  # TODO ...?
+#
+#     improvement = True
+#     ind_score = path_length(ind, A, n)
+#     while improvement:
+#         improvement = False
+#         for i in range(ind.size): # TODO why range?
+#             res = improve_path(ind)
+#             if res is not None:
+#                 res_score = path_length(res, A, n)
+#                 if res_score < ind_score:
+#                     ind = res
+#                     ind_score = res_score
+#                     improvement = True
+#                     break
+#             ind = np.roll(ind, -1)
+#     return ind
 
 
 ### metrics
-
 def generate_network_metrics(V, E, A, n, performance_metrics):
     best_path_length, best_path, successes, mean_iters = performance_metrics
 
@@ -236,8 +230,8 @@ def project_LON(V, E, A_, n_, nodes_array):  # TODO check
 def generate_projection_metrics(L, E, A, n, foldername):
     pass
 
-### helpers
 
+### helpers
 def generate_subinstances(A, n, out_file, amount, nodes_removed):
     for t in range(amount):
         A_, n_, nodes_array = random_subinstance(A, n, n-nodes_removed)

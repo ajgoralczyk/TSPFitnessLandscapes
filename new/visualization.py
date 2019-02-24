@@ -2,7 +2,6 @@ import igraph
 from helpers import *
 import numpy as np
 
-### data visualization
 
 def generate_projection_image(V, E, V_lon, E_lon, A, n, out_file, g_min=None):
     E_probs = get_edges_probs(V, E)
