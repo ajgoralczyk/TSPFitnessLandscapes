@@ -26,7 +26,7 @@ def main_part2__LONs(instances_foldername, lons_foldername, metrics_foldername, 
                 print("start", datetime.datetime.now())
                 A, n, nodes_array = load_TSP(instances_foldername + "/data_" + out_folder + "/" + instance_filename)
 
-                L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 10, 10, K)
+                L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 10, 100, K)
                 save_LON(L, E, A, n, nodes_array, lons_foldername + "/" + out_file + ".g")
                 save_metrics((best_path_length, best_path, successes, mean_iters), metrics_foldername + "/" + out_file + ".metrics")
                 save_best(instances_foldername + "/" + out_file + '.best', best_path_length, best_path)
