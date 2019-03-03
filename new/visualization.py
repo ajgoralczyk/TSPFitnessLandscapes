@@ -4,7 +4,7 @@ import numpy as np
 
 
 def generate_projection_image(V, E, V_lon, E_lon, A, n, out_file, g_min=None):
-    E_probs = get_edges_probs(V, E)
+    E_probs = get_edges_probs(E)
     E = set(E.keys())
 
     print("projection nodes in LON", len(V & V_lon), " / ", len(V) )
@@ -13,7 +13,12 @@ def generate_projection_image(V, E, V_lon, E_lon, A, n, out_file, g_min=None):
     results = sorted([path_length(s, A, n) for s in V])  # ascending
     if not g_min:
         g_min = results[0]
-    threshold = results[400]  # max number of nodes
+
+    if len(results) > 400:
+        threshold = results[400]  # max number of nodes
+    else:
+        threshold = results[-1]
+
     V = {s for s in V if path_length(s, A, n) <= threshold}  # s - path
     V_ = {s: (i, path_length(s, A, n)) for i, s in enumerate(V)}
 
@@ -62,12 +67,17 @@ def generate_projection_image(V, E, V_lon, E_lon, A, n, out_file, g_min=None):
 
 
 def generate_image(V, E, A, n, out_file, g_min=None): # generate png image from graph file
-    E_probs = get_edges_probs(V, E)
+    E_probs = get_edges_probs(E)
     E = set(E.keys())
     results = sorted([path_length(s, A, n) for s in V])  # ascending
     if not g_min:
         g_min= results[0]
-    threshold = results[400]  # max number of nodes
+
+    if len(results) > 400:
+        threshold = results[400]  # max number of nodes
+    else:
+        threshold = results[-1]
+
     V = { s for s in V if path_length(s, A, n) <= threshold}  # s - path
     V_ = { s : (i, path_length(s, A, n)) for i, s in enumerate(V)}
 
@@ -114,20 +124,19 @@ def gen_sub_images(filename, T, s): # automated subinstances graph image files g
         generate_image(sub_file)
 
 
-def adjacency_list(V, E, reversed_order=False):
+def adjacency_list(E, reversed_order=False):
     E_ = {}
     for s1, s2 in E:
-        if s1 in V and s2 in V:  # TODO in my cases should never be false
-            if not reversed_order:
-                if s1 in E_:
-                    E_[s1].append(s2)
-                else:
-                    E_[s1] = [s2]
+        if not reversed_order:
+            if s1 in E_:
+                E_[s1].append(s2)
             else:
-                if s2 in E_:
-                    E_[s2].append(s1)
-                else:
-                    E_[s2] = [s1]
+                E_[s1] = [s2]
+        else:
+            if s2 in E_:
+                E_[s2].append(s1)
+            else:
+                E_[s2] = [s1]
     return E_
 
 
@@ -145,7 +154,7 @@ def dfs(v, V, E, g_min, prev, A, n):
 
 
 def find_pos_glob(V, E, g_min, A, n):
-    E_ = adjacency_list(V, E)
+    E_ = adjacency_list(E)
     pos_glob = set()
     for v in V.keys():
         if dfs(v, V, E_, g_min, None, A, n):
@@ -153,8 +162,8 @@ def find_pos_glob(V, E, g_min, A, n):
     return pos_glob
 
 
-def get_edges_probs(V, E):
-    E_ = adjacency_list(V, set(E.keys()))  # key - (s1,s2)
+def get_edges_probs(E):
+    E_ = adjacency_list(set(E.keys()))  # key - (s1,s2)
     E_probs = {}
     for v, l in E_.items():
         s = sum([E[(v, neigh)] for neigh in l])

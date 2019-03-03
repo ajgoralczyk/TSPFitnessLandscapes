@@ -37,7 +37,7 @@ def print_metrics(performance_metrics_foldername, network_metrics_foldername):
             # best_path_length, best_path, successes, mean_iters
         network_metrics = io.load_metrics(network_metrics_foldername + "/" + filename)
             # nodes, edges, sinks, in_strength, nodes_in_optimal_funnels, nodes_with_unique_path_length
-        success_rate.append(performance_metrics[2]/1000)
+        success_rate.append(performance_metrics[2]/1000)  ##############################################################
         iters_to_success.append(format(performance_metrics[3], '.2f'))
         nodes.append(network_metrics[0])
         edges.append(network_metrics[1])

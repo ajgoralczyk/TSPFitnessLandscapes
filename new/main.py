@@ -3,27 +3,35 @@ from visualization import *
 import os
 import datetime
 
-def main_part1__TSP_problems(tsp_filename, instances_foldername):  # step 1  # input bays29.tsp
-    A, n = parse_TSP_from_file(tsp_filename)
-    out_file = tsp_filename.split('.')[0]
-    nodes_array = list(range(n))
-    save_TSP(A, n, nodes_array, instances_foldername + "/" + out_file)  # nodes list, sub-instances have arrays
-    generate_subinstances(A, n, instances_foldername + "/" + out_file, 9, 1)
-    generate_subinstances(A, n, instances_foldername + "/" + out_file, 9, 2)
-    generate_subinstances(A, n, instances_foldername + "/" + out_file, 10, 5)
+def TSP_sub_problems_generation(problems_foldername):
+    for filename in os.listdir(problems_foldername):
+        if filename.endswith('.tsp'):
+            A, n = parse_TSP_from_file(problems_foldername + '/' + filename)
+            out_file = filename.split('.')[0]
+            out_folder = problems_foldername + "/data_" + out_file
+            nodes_array = list(range(n))
+            save_TSP(A, n, nodes_array, out_folder + '/' + out_file)
+            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 2)
+            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 5)
+            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 10)
 
 
 def main_part2__LONs(instances_foldername, lons_foldername, metrics_foldername, K):
     for filename in os.listdir(instances_foldername):
-        print("start", datetime.datetime.now())
-        A, n, nodes_array = load_TSP(instances_foldername + "/" + filename)
-        out_file = filename.split('.')[0]
+        if filename.endswith('.tsp'):
+            out_folder = filename.split('.')[0]
 
-        L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 10, 10, K)
-        save_LON(L, E, A, n, nodes_array, lons_foldername + "/" + out_file + ".g")
-        save_metrics((best_path_length, best_path, successes, mean_iters), metrics_foldername + "/" + out_file + ".metrics")
-        print("end", datetime.datetime.now())
-        print("LON ", out_file)
+            for instance_filename in os.listdir(instances_foldername + "/data_" + out_folder):
+                out_file = instance_filename.split('.')[0]
+                print("start", datetime.datetime.now())
+                A, n, nodes_array = load_TSP(instances_foldername + "/data_" + out_folder + "/" + instance_filename)
+
+                L, E, best_path_length, best_path, successes, mean_iters = generate_LON(A, 10, 10, K)
+                save_LON(L, E, A, n, nodes_array, lons_foldername + "/" + out_file + ".g")
+                save_metrics((best_path_length, best_path, successes, mean_iters), metrics_foldername + "/" + out_file + ".metrics")
+                save_best(instances_foldername + "/" + out_file + '.best', best_path_length, best_path)
+                print("end", datetime.datetime.now())
+                print("LON ", out_file)
 
 
 def main_part3__images(lons_foldername, images_foldername):
@@ -40,7 +48,7 @@ def main_part4__metrics(best_foldername, lons_foldername, performance_metrics_fo
         out_file = filename.split('.')[0]
         performance_metrics = load_metrics(performance_metrics_foldername + "/" + out_file + ".metrics")
         network_metrics = generate_network_metrics(L, E, A, n, performance_metrics)
-        # save_metrics(best_foldername, best_foldername + "/" + out_file + ".metrics")
+        # save_best(best_foldername, best_foldername + "/" + out_file + ".metrics")
         save_metrics(network_metrics, metrics_foldername + "/" + out_file + ".metrics")
 
 
@@ -79,11 +87,19 @@ def main_part7__projection_metrics(projections_foldername, projection_metrics_fo
         generate_projection_metrics(L, E, A, n, projection_metrics_foldername + "/" + out_file)
 
 
-# main_part1__TSP_problems("bays29.tsp", "data_bays29")
-# main_part2__LONs("data_bays29", "test/1_lons", "test/3_performance_metrics", 1)
-# main_part3__LON_images("1_bays29_1000/1_lons", "1_bays29_1000/2_images")
-# TODO main_part4__metrics("best", "test/1_lons", "test/3_performance_metrics", "test/4_network_metrics")
-# main_part5__projections("1_bays29_1000/1_lons", "1_bays29_1000/5_projections",
-#   "1_bays29_1000/6_projection_images")
-#main_part6__projection_images("2_bays29_10000/5_projections",
-#   "2_bays29_10000/1_lons", "2_bays29_10000/2_images", "2_bays29_10000/6_projection_images")
+# TSP_sub_problems_generation("data")
+
+if __name__ == '__main__':
+    main_part2__LONs("data", "checking2/1_lons", "checking2/3_performance_metrics", 1)
+
+
+
+
+
+
+
+
+
+
+
+
