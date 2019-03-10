@@ -1,5 +1,6 @@
 import numpy as np
 import pickle
+import os
 
 
 def save_TSP(A, n, nodes_array, file_name):
@@ -38,13 +39,20 @@ def load_metrics(file_name):
 
 
 def save_best(file_name, best_path_length, best_path):
-    with open(file_name, "wb") as fh:
-        pickle.dump(tuple([best_path_length, best_path]), fh)
+    previous_best_path = None
+    if os.path.isfile(file_name):
+        with open(file_name, "rb") as fh:
+            previous_best_path_length, previous_best_path = pickle.load(fh)
+
+    if previous_best_path is None or best_path_length < previous_best_path_length:
+        with open(file_name, "wb") as fh:
+            pickle.dump((best_path_length, best_path), fh)
+
 
 def load_best(file_name):
     with open(file_name, "rb") as fh:
-        metrics_tuple = pickle.load(fh)
-        return metrics_tuple
+        best_path_length, best_path = pickle.load(fh)
+        return best_path_length, best_path
 
 
 def parse_TSP_from_file(filename):

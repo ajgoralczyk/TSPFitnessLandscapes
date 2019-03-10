@@ -118,12 +118,6 @@ def generate_image(V, E, A, n, out_file, g_min=None): # generate png image from 
     print("image ", out_file)
 
 
-def gen_sub_images(filename, T, s): # automated subinstances graph image files generation
-    for t in range(T):
-        sub_file = filename + "_" + str(s) + "_" + str(t)
-        generate_image(sub_file)
-
-
 def adjacency_list(E, reversed_order=False):
     E_ = {}
     for s1, s2 in E:

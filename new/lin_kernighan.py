@@ -1,132 +1,159 @@
 from helpers import *
+from itertools import starmap
 
-def optimise_path(path, A, n): # Step 1
-    solutions = set()
-    intersection = set()
-    previous_edges = set()
-    better = True
-    i = 1
+class LK:
+    def __init__(self, tour, A, n, closest_nodes):
+        self.tour = tour
+        self.A = A
+        self.n = n
+        self.edges = set()
+        for i in range(self.n):
+            self.edges.add((self.tour[i - 1], self.tour[i]))
+            self.edges.add((self.tour[i], self.tour[i - 1]))
+        self.closest_nodes = closest_nodes
 
-    while better:
-        better, better_path, better_path_length = improve(solutions, intersection, path, A, n)
-        solutions.add(tuple(better_path))
+    def closest_tuples(self):
+        def tuple(node1, node2, indexes):
+            return (node2, indexes[node2], self.A[node1, node2])
 
-        if len(previous_edges) == 0:
-            for index in range(len(better_path)):
-                previous_edges.add(make_pair(better_path[index - 1], better_path[index]))
-        elif len(intersection) == 0:
-            edges = set()
-            for index in range(len(better_path)):
-                edges.add(make_pair(better_path[index - 1], better_path[index]))
-            intersection = previous_edges & edges
+        closest = {}
+        indexes = {}
+        for i in range(self.n):
+            indexes[self.tour[i]] = i
+        for i in range(self.n):
+            closest[i] = list(starmap(tuple, [(i, node, indexes) for node in self.closest_nodes[i]]))
+        return closest
+
+
+    def optimize_path(self): # Step 1
+        solutions = set()
+        intersection = set()
+        previous_edges = set()
+        better = True
+        i = 1
+
+        while better:
+            closest_tuples = self.closest_tuples()
+            better, better_path, better_path_length = self.improve(solutions, intersection, closest_tuples)
+            solutions.add(normalize_path(better_path))
+
+            if len(previous_edges) == 0:
+                for index in range(len(better_path)):
+                    previous_edges.add((better_path[index - 1], better_path[index]))
+                    previous_edges.add((better_path[index], better_path[index - 1]))
+            elif len(intersection) == 0:
+                edges = set()
+                for index in range(len(better_path)):
+                    edges.add((better_path[index - 1], better_path[index]))
+                    edges.add((better_path[index], better_path[index - 1]))
+                intersection = previous_edges & edges
+            else:
+                edges = set()
+                for index in range(len(better_path)):
+                    edges.add((better_path[index - 1], better_path[index]))
+                    edges.add((better_path[index], better_path[index - 1]))
+                intersection = intersection & edges
+
+            self.tour = better_path
+            i += 1
+
+        return self.tour
+
+    def improve(self, solutions, intersection, closest_tuples):
+        for index_t1, t1 in enumerate(self.tour):  # Step 2, 12
+            around_t1 = nodes_around(self.tour, index_t1)
+
+            for t2, index_t2 in around_t1:  # Step 3, 11
+                broken = {(t1, t2), (t2, t1)}
+                gain = self.A[t1, t2]
+                closest_neighbours = self.closest(t2, gain, broken, closest_tuples[t2])
+
+                for t3, (_, Gi, index_t3) in closest_neighbours:
+                    if t3 not in [node[0] for node in around_t1]:
+                        joined = {(t3, t2), (t2, t3)}  # Rule 1 - only sequential exchanges
+
+                        is_better, better_path, better_path_cost = self.chooseX(solutions, intersection, closest_tuples, t1, index_t1, t3, index_t3, Gi, broken, joined)
+                        if is_better:
+                            return is_better, better_path, better_path_cost
+
+        return False, self.tour, None  # Step 13
+
+    def closest(self, t2i, gain, broken, closest_tuples): # Rule 5 - 5 closest neighbours
+        neighbours = {}
+        for node, node_index, edge_length in closest_tuples: # (node, index, edge_distance)
+            yi = (t2i, node)
+            new_gain = gain - edge_length  # Rule 2 - selecting yi, that Gi (g1 + g2 + ... + gi) > 0
+
+            if new_gain > 0 and yi not in broken and not yi in self.edges:  # Rule 4 - X, Y separate
+                for next_node, index_next_node in nodes_around(self.tour, node_index):
+                    xi = (node, next_node)
+
+                    if xi not in broken:
+                        diff = self.A[node, next_node] - edge_length # Rule 8 - selecting yi with priority c(xi+1) - c(yi)
+
+                        if node in neighbours and diff > neighbours[node][0]:
+                            neighbours[node][0] = diff
+                        else:
+                            neighbours[node] = [diff, new_gain, node_index]
+
+        return sorted(neighbours.items(), key=lambda x: x[1][0], reverse=True)
+
+    def chooseX(self, solutions, intersection, closest_tuples, t1, index_t1, last, index_last, gain, broken, joined):
+        # if len(broken) >= 9: ############################################# 1
+        #     return False, None, None
+        around = []
+        if len(broken) == 6:  # Rule 9 - selecting x4, larger c(x4)
+            (pred, index_pred), (succ, index_succ) = nodes_around(self.tour, index_last)
+
+            tc1 = TourCheck(self.tour, broken | {(pred, last), (last, pred)}, joined | {(t1, pred), (pred, t1)})
+            tc2 = TourCheck(self.tour, broken | {(succ, last), (last, succ)}, joined | {(t1, succ), (succ, t1)})
+            if pred != t1 and self.A[pred, last] > self.A[succ, last] and tc1.check_tour():
+                around = [(pred, index_pred)]
+            elif succ != t1 and tc2.check_tour():
+                around = [(succ, index_succ)]
         else:
-            edges = set()
-            for index in range(len(better_path)):
-                edges.add(make_pair(better_path[index - 1], better_path[index]))
-            intersection = intersection & edges
+            around = nodes_around(self.tour, index_last)
 
-        path = better_path
-        i += 1
+        for t2i, index_t2i in around:
+            xi = (last, t2i)
+            if len(broken) >= 6 and xi in intersection:  # Rule 6 - xi can't be broken if common link of multiple tours
+                continue
+            new_gain = gain + self.A[last, t2i]
 
-    return path
+            if xi not in joined and xi not in broken and t2i != t1:
+                total_gain = new_gain - self.A[t2i, t1]
 
-def improve(solutions, intersection, path, A, n):
-    for t1, index_t1 in enumerate(path):  # Step 2, 12
-        around_t1 = nodes_around(path, index_t1)
+                tc = TourCheck(self.tour, broken | {(last, t2i),(t2i, last)}, joined | {(t1, t2i), (t2i, t1)})
+                is_tour, new_tour = tc.generate_tour() # Rule 3 - selecting xi, (t2i, t1) must make a valid tour
 
-        for t2, index_t2 in around_t1:  # Step 3, 11
-            broken = {make_pair(t1, t2)}
-            gain = A[t1, t2]
-            closest_neighbours = closest(A, t2, path, gain, broken)
+                if is_tour:
+                    if normalize_path(new_tour) in solutions:  # Rule 7 - new tour == previous tour - break
+                        return False, None, None
 
-            for t3, (_, Gi, index_t3) in closest_neighbours:
-                if t3 not in [node[0] for node in around_t1]:
-                    joined = {make_pair (t2, t3)}  # Rule 1 - only sequential exchanges
+                    if total_gain > 0:
+                        return True, new_tour, path_length(new_tour, self.A, self.n)
 
-                    is_better, better_path, better_path_cost = chooseX(solutions, intersection, A, n, path, t1, index_t1, t3, index_t3, Gi, broken, joined)
-                    if is_better:
-                        return is_better, better_path, better_path_cost
-
-    return False, path, None  # Step 13
-
-def closest(A, t2i, tour, gain, broken):
-    distances = []
-    for index, node in enumerate(tour):
-        if node == t2i:
-            continue
-        distances.append(tuple([node, A[t2i, node], index]))
-    neighbours = sorted(distances, key=lambda tup: tup[1])[:5]  # Rule 5 - 5 closest neighbours
-
-    closest_neighbours = {}
-    for node in neighbours:
-        yi = make_pair(t2i, node[0])
-        new_gain = gain - node[1]  # Rule 2 - selecting yi, that Gi (g1 + g2 + ... + gi) > 0
-
-        if new_gain > 0 and yi not in broken and not tour_contains(tour, yi):  # Rule 4 - X, Y separate
-            for next_node, index_next_node in nodes_around(tour, node[2]):
-                xi = make_pair(node[0], next_node)
-
-                if xi not in broken:
-                    diff = A[node[0], next_node] - A[t2i, node[0]] # Rule 8 - selecting yi with priority c(xi+1) - c(yi)
-
-                    if node[0] in closest_neighbours and diff > closest_neighbours[node[0]][0]:
-                        closest_neighbours[node[0]][0] = diff
+                    choice, new_tour, new_tour_cost = self.chooseY(solutions, intersection, closest_tuples, t1, index_t1, t2i, index_t2i, new_gain, broken | {(last, t2i),(t2i, last)}, joined)
+                    if len(broken) == 2 and not choice:
+                        pass
                     else:
-                        closest_neighbours[node[0]] = [diff, new_gain, node[2]]
+                        return choice, new_tour, new_tour_cost
 
-    return sorted(closest_neighbours.items(), key=lambda x: x[1][0], reverse=True) 
+        return False, None, None
 
-def chooseX(solutions, intersection, A, n, tour, t1, index_t1, last, index_last, gain, broken, joined):
-    # if len(broken) >= 9: ############################################# 1
-    #     return False, None, None
-    around = []
-    if len(broken) == 3:  # Rule 9 - selecting x4, larger c(x4)
-        (pred, index_pred), (succ, index_succ) = nodes_around(tour, index_last)
-        if A[pred, last] > A[succ, last] and check_tour(tour, broken | {make_pair(pred, last)}, joined | {make_pair(pred, t1)}):
-            around = [(pred, index_pred)]
-        elif check_tour(tour, broken | {make_pair(succ, last)}, joined | {make_pair(succ, t1)}):
-            around = [(succ, index_succ)]
-    else:
-        around = nodes_around(tour, index_last)
+    def chooseY(self, solutions, intersection, closest_tuples, t1, index_t1, t2i, index_t2i, gain, broken, joined):
+        closest_neighbours = self.closest(t2i, gain, broken, closest_tuples[t2i])
 
-    for t2i, index_t2i in around:
-        xi = make_pair(last, t2i)
-        if len(broken) >= 3 and xi in intersection:  # Rule 6 - xi can't be broken if common link of multiple tours
-            continue
-        new_gain = gain + A[last, t2i]
+        for node, (_, Gi, index_node) in closest_neighbours:
+            yi = (t2i, node)
 
-        if xi not in joined and xi not in broken:
-            total_gain = new_gain - A[t2i, t1]
-            is_tour, new_tour = check_tour(tour, broken | {xi}, joined | {make_pair(t2i, t1)}) # Rule 3 - selecting xi, (t2i, t1) must make a valid tour
-
-            if is_tour:
-                if tuple(new_tour) in solutions:  # Rule 7 - new tour == previous tour - break 
-                    return False, None, None
-
-                if total_gain > 0:
-                    return True, new_tour, path_length(new_tour, A, n)
-
-                choice, new_tour, new_tour_cost = chooseY(solutions, intersection, A, n, tour, t1, index_t1, t2i, index_t2i, new_gain, broken | {xi}, joined)
-                if len(broken) == 1 and not choice:
+            if not yi in self.edges:
+                is_better, new_tour, new_tour_cost = self.chooseX(solutions, intersection, closest_tuples, t1, index_t1, node, index_node, Gi, broken, joined | {(t2i, node), (node, t2i)})
+                if len(broken) == 4 and not is_better:
                     pass
                 else:
-                    return choice, new_tour, new_tour_cost
+                    return is_better, new_tour, new_tour_cost
 
-    return False, None, None
-
-def chooseY(solutions, intersection, A, n, tour, t1, index_t1, t2i, index_t2i, gain, broken, joined):
-    closest_neighbours = closest(A, t2i, tour, gain, broken)
-
-    for node, (_, Gi, index_node) in closest_neighbours:
-        yi = make_pair(t2i, node)
-        
-        if not tour_contains(tour, yi):
-            is_better, new_tour, new_tour_cost = chooseX(solutions, intersection, A, n, tour, t1, index_t1, node, index_node, Gi, broken, joined | {yi})
-            if len(broken) == 2 and not is_better:
-                pass
-            else:
-                return is_better, new_tour, new_tour_cost
-
-    return False, None, None
+        return False, None, None
 
 # Steps 4, 5, 6, 7, 8, 9, 10
