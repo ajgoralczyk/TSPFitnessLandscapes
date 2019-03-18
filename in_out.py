@@ -50,9 +50,12 @@ def save_best(file_name, best_path_length, best_path):
 
 
 def load_best(file_name):
-    with open(file_name, "rb") as fh:
-        best_path_length, best_path = pickle.load(fh)
-        return best_path_length, best_path
+    if os.path.isfile(file_name):
+        with open(file_name, "rb") as fh:
+            best_path_length, best_path = pickle.load(fh)
+            return best_path_length, best_path
+    else:
+        return None, None
 
 
 def parse_TSP_from_file(filename):

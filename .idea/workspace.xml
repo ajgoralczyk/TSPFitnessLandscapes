@@ -2,700 +2,78 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b8ccd7ec-e27e-4c06-99ed-e97e4084474f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/subproblems.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/.ipynb_checkpoints/displaying_results-checkpoint.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bays29.tsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check/1_lons/berlin52.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/check/3_performance_metrics/berlin52.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_10_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_10_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_10_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_10_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_10_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/berlin52_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_10_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_10_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_10_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_10_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/eil76_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/lin105.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/lin105_10_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/1_lons/lin105_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_10_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_10_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_10_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_10_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_10_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/berlin52_5_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_10_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_10_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_10_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_10_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/eil76_5_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/lin105.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/lin105_10_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/2_images/lin105_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_10_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_10_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_10_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_10_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_10_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/berlin52_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_10_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_10_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_10_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_10_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/eil76_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/lin105.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/lin105_10_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/checking2/3_performance_metrics/lin105_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_1_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_2_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_0.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_1.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_2.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_3.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_4.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_5.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_6.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_7.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_8.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_bays29/bays29_5_9.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_check/berlin52.matrix" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data_check_best/berlin52.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_1_5.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_1_6.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_1_7.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_1_8.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_2_5.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_2_6.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_2_7.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_2_8.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_5_5.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_5_6.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_5_7.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_5_8.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_bays29/bays29_5_9.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_10_0.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_10_1.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_10_2.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_10_3.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_10_4.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_2_0.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_2_1.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_2_2.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_2_3.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_2_4.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_5_0.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_5_1.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_5_2.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_5_3.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_berlin52_best/berlin52_5_4.best" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_10_0.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_10_1.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_10_2.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_10_3.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_10_4.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_2_0.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_2_1.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_2_2.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_2_3.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_2_4.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_5_0.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_5_1.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_5_2.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_5_3.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/data_lin105/lin105_5_4.matrix" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/lin105.tsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/displaying_results.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/displaying_results.ipynb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fitness_landcape.py" beforeDir="false" afterPath="$PROJECT_DIR$/fitness_landcape.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fitness_landcape.py" beforeDir="false" afterPath="$PROJECT_DIR$/metrics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/in_out.py" beforeDir="false" afterPath="$PROJECT_DIR$/in_out.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lon.py" beforeDir="false" afterPath="$PROJECT_DIR$/lon.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_2_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/1_lons/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_2_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/2_images/bays29_5_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/3_performance_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/4_network_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_2_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/5_projections/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_2_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/1_bays29_1000/6_projection_images/bays29_5_9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/1_lons/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/2_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/3_performance_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/4_network_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/5_projections/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/2_bays29_10000/6_projection_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/1_lons/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/2_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/3_performance_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/4_network_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/5_projections/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_1_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_2_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_2_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_5_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/3_bays29_100000/6_projection_images/bays29_5_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_2_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/1_lons/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/2_images/bays29_1_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/2_images/bays29_1_7.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/2_images/bays29_2_3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/2_images/bays29_2_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/2_images/bays29_5_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/3_performance_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/4_bays29_1000/4_network_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_1_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_2_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_1.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_2.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_3.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_4.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_6.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_8.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/1_lons/bays29_5_9.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_1_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_2_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_1.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_2.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_3.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_4.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_6.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_8.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test/3_performance_metrics/bays29_5_9.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_1_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_1_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_1_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_2_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_2_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_2_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_5_0.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_5_5.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/1_lons/bays29_5_7.g" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/3_performance_metrics/bays29_5_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_1_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_1_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_1_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_2_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_2_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_2_7.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_5_0.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_5_5.metrics" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test1000/4_network_metrics/bays29_5_7.metrics" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/libraries/R_User_Library.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/new.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/1_lons/eil76_5_1.g" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/bays29_1_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/bays29_1_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/bays29_1_7.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/bays29_1_7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/bays29_2_3.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/bays29_2_3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/bays29_2_6.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/bays29_2_6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/bays29_5_0.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/bays29_5_0.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/berlin52_10_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/berlin52_10_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/berlin52_2_4.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/berlin52_2_4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/eil76_10_2.png" beforeDir="false" afterPath="$PROJECT_DIR$/new_results/2_images/eil76_10_2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/new_results/2_images/eil76_5_1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/notebook.py" beforeDir="false" afterPath="$PROJECT_DIR$/notebook.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -781,26 +159,68 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-905588262">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.open.time.17" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="dummy" value="7" />
+          <entry key="py" value="1033" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="PLAIN_TEXT" value="7" />
+          <entry key="Python" value="1033" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="17" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="17" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="573">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/notebook.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
               <folding>
-                <element signature="e#0#30#0" expanded="true" />
+                <element signature="e#0#41#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lon.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="116" column="102" lean-forward="true" selection-start-line="116" selection-start-column="102" selection-end-line="116" selection-end-column="102" />
+            <state relative-caret-position="108">
+              <caret line="116" column="63" selection-start-line="116" selection-start-column="63" selection-end-line="116" selection-end-column="63" />
               <folding>
                 <element signature="e#0#20#0" expanded="true" />
               </folding>
@@ -809,28 +229,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/helpers.py">
+        <entry file="file://$PROJECT_DIR$/lin_kernighan.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+            <state relative-caret-position="108">
+              <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tour_check.py">
+        <entry file="file://$PROJECT_DIR$/in_out.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="888">
-              <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+            <state relative-caret-position="285">
+              <caret line="50" selection-start-line="50" selection-end-line="50" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/metrics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+            <state relative-caret-position="-336">
+              <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -849,16 +269,10 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>adjacency_list</find>
-      <find>pred</find>
-      <find>((</find>
-      <find>in bro</find>
-      <find>in joi</find>
       <find>best</find>
       <find>joined</find>
       <find>check_</find>
       <find>len</find>
-      <find>try</find>
       <find>path_fragments</find>
       <find>check</find>
       <find>chooseX</find>
@@ -879,13 +293,19 @@
       <find>broken_</find>
       <find>broken_indexes</find>
       <find>generate_subinstances</find>
+      <find>closest_nodes</find>
+      <find>in_degree</find>
+      <find>best_path_length</find>
+      <find>todo</find>
+      <find>successes</find>
+      <find>try</find>
     </findStrings>
     <dirStrings>
       <dir>C:\Users\jessa\Documents\GitHub\TSPFitnessLandscapes\new</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -895,23 +315,25 @@
         <option value="$PROJECT_DIR$/../old/tsp_map.py" />
         <option value="$PROJECT_DIR$/read_old_data.py" />
         <option value="$USER_HOME$/Desktop/tsp_local_kopt.py" />
-        <option value="$PROJECT_DIR$/notebook.py" />
         <option value="$PROJECT_DIR$/main2.py" />
-        <option value="$PROJECT_DIR$/in_out.py" />
         <option value="$PROJECT_DIR$/visualization.py" />
         <option value="$PROJECT_DIR$/lin_kernighan.py" />
         <option value="$PROJECT_DIR$/helpers.py" />
         <option value="$PROJECT_DIR$/tour_check.py" />
         <option value="$PROJECT_DIR$/fitness_landcape.py" />
+        <option value="$PROJECT_DIR$/subproblems.py" />
+        <option value="$PROJECT_DIR$/in_out.py" />
+        <option value="$PROJECT_DIR$/notebook.py" />
         <option value="$PROJECT_DIR$/main.py" />
         <option value="$PROJECT_DIR$/lon.py" />
+        <option value="$PROJECT_DIR$/metrics.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="width" value="3210" />
-    <option name="height" value="1732" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-10" />
+    <option name="width" value="2342" />
+    <option name="height" value="1826" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -936,18 +358,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="new" type="b2602c69:ProjectViewProjectNode" />
-              <item name="new" type="462c0819:PsiDirectoryNode" />
+              <item name="TSPFitnessLandscapes" type="b2602c69:ProjectViewProjectNode" />
+              <item name="TSPFitnessLandscapes" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -966,8 +388,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="Unnamed" type="PythonConfigurationType" factoryName="Python">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="lon" type="PythonConfigurationType" factoryName="Python">
       <module name="FitnessLandscape" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -988,6 +410,31 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python">
+      <module name="FitnessLandscape" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\ProgramData\Anaconda3\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.lon" />
+      <item itemvalue="Python.main" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1003,17 +450,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1" y="0" width="1605" height="866" extended-state="0" />
+    <frame x="-6" y="-6" width="1613" height="873" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4707483" visible="true" weight="0.16031028" />
-      <window_info id="Structure" order="1" sideWeight="0.5292517" side_tool="true" visible="true" weight="0.16031028" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.46419752" visible="true" weight="0.22186495" />
+      <window_info id="Structure" order="1" sideWeight="0.5358025" side_tool="true" visible="true" weight="0.22186495" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="0" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" weight="0.35510203" />
-      <window_info anchor="bottom" id="Debug" order="4" weight="0.32380953" />
+      <window_info anchor="bottom" id="Run" order="3" weight="0.35444745" />
+      <window_info active="true" anchor="bottom" id="Debug" order="4" visible="true" weight="0.4541779" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="7" />
@@ -1036,13 +483,33 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/lon.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="159" />
+          <line>30</line>
+          <option name="timeStamp" value="166" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/lon.py</url>
-          <line>76</line>
-          <option name="timeStamp" value="160" />
+          <line>71</line>
+          <option name="timeStamp" value="167" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lon.py</url>
+          <line>73</line>
+          <option name="timeStamp" value="169" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lon.py</url>
+          <line>85</line>
+          <option name="timeStamp" value="171" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lon.py</url>
+          <line>122</line>
+          <option name="timeStamp" value="172" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/lon.py</url>
+          <line>101</line>
+          <option name="timeStamp" value="173" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>
@@ -1055,12 +522,28 @@
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
-        <watch expression="normalize_path(new_tour)" language="Python" />
+        <watch expression="L_in_degree[node]" language="Python" />
+        <watch expression="L_out_degree[node]" language="Python" />
       </configuration>
     </watches-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
+      <expression>
+        <expression-string>L_out_degree[node]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>L_in_degree[node]</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>path_length(random_path, A, n)</expression-string>
+        <language-id>Python</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>normalize_path(new_tour)</expression-string>
         <language-id>Python</language-id>
@@ -1096,21 +579,6 @@
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
-      <expression>
-        <expression-string>len(self.tour)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>broken | {(last, t2i),(t2i, last)}</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>len(y)</expression-string>
-        <language-id>Python</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
@@ -1129,13 +597,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../old/tsp_map.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="389">
-          <caret line="139" column="25" lean-forward="true" selection-start-line="139" selection-start-column="25" selection-end-line="139" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../old/tsp_map.py" />
     <entry file="file://$PROJECT_DIR$/read_old_data.py" />
     <entry file="file://$USER_HOME$/Desktop/test.py" />
     <entry file="file://$USER_HOME$/Desktop/tsp_local_kopt.py" />
@@ -1146,30 +608,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Desktop/att48.tsp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/notebook.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/in_out.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1296">
-          <caret line="54" column="42" selection-start-line="54" selection-start-column="15" selection-end-line="54" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main2.py" />
+    <entry file="file://$USER_HOME$/Desktop/att48.tsp" />
     <entry file="file://$PROJECT_DIR$/visualization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="24">
@@ -1179,54 +619,72 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/helpers.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="15" column="30" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        <state relative-caret-position="360">
+          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lin_kernighan.py">
+    <entry file="file://$PROJECT_DIR$/subproblems.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2904">
-          <caret line="121" column="37" selection-start-line="121" selection-start-column="37" selection-end-line="121" selection-end-column="37" />
+        <state relative-caret-position="96">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/notebook.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
           <folding>
-            <element signature="e#0#21#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tour_check.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/fitness_landcape.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="573">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lon.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="116" column="102" lean-forward="true" selection-start-line="116" selection-start-column="102" selection-end-line="116" selection-end-column="102" />
+        <state relative-caret-position="108">
+          <caret line="116" column="63" selection-start-line="116" selection-start-column="63" selection-end-line="116" selection-end-column="63" />
           <folding>
             <element signature="e#0#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lin_kernighan.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="134" column="32" selection-start-line="134" selection-start-column="32" selection-end-line="134" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tour_check.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="37" column="39" selection-start-line="37" selection-start-column="39" selection-end-line="37" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/in_out.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/metrics.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-336">
+          <caret line="37" column="53" lean-forward="true" selection-start-line="37" selection-start-column="53" selection-end-line="37" selection-end-column="53" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>

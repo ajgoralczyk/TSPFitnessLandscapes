@@ -1,39 +1,27 @@
-from fitness_landcape import *
+from metrics import *
 from visualization import *
 import os
 # import datetime
 # import sys
 
-def TSP_sub_problems_generation(problems_foldername):
-    for filename in os.listdir(problems_foldername):
-        if filename.endswith('.tsp'):
-            A, n = parse_TSP_from_file(problems_foldername + '/' + filename)
-            out_file = filename.split('.')[0]
-            out_folder = problems_foldername + "/data_" + out_file
-            nodes_array = list(range(n))
-            save_TSP(A, n, nodes_array, out_folder + '/' + out_file)
-            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 2)
-            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 5)
-            generate_subinstances(A, n, out_folder + '/' + out_file, 5, 10)
 
-
-def main_part3__images(best_foldername, lons_foldername, images_foldername):
+def LON_visualization(best_foldername, lons_foldername, images_foldername):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
-        # best_path_length, best_path = load_best(best_foldername + "/" + out_file + ".best")
-        generate_image(L, E, A, n, images_foldername + "/" + out_file) # , best_path_length
+        best_path_length, best_path = load_best(best_foldername + "/" + out_file + ".best")
+        generate_image(L, E, A, n, images_foldername + "/" + out_file, best_path_length)
 
 
-def main_part4__metrics(best_foldername, lons_foldername, performance_metrics_foldername, metrics_foldername):
+def metrics(best_foldername, lons_foldername, performance_metrics_foldername, metrics_foldername, chained_lk_runs):
     for filename in os.listdir(lons_foldername):
         L, E, A, n, nodes_array = load_LON(lons_foldername + "/" + filename)
         out_file = filename.split('.')[0]
         performance_metrics = load_metrics(performance_metrics_foldername + "/" + out_file + ".metrics")
         best_path_length, best_path = load_best(best_foldername + "/" + out_file + ".best")
-        network_metrics = generate_network_metrics(L, E, A, n, performance_metrics, best_path_length, best_path)
+        metrics = generate_metrics(L, E, A, n, performance_metrics, best_path_length, best_path, chained_lk_runs)
 
-        save_metrics(network_metrics, metrics_foldername + "/" + out_file + ".metrics")
+        save_metrics(metrics, metrics_foldername + "/" + out_file + ".metrics")
 
 
 def main_part5__projections(lons_foldername, projections_foldername):
@@ -71,17 +59,6 @@ def main_part7__projection_metrics(projections_foldername, projection_metrics_fo
 
         generate_projection_metrics(L, E, A, n, projection_metrics_foldername + "/" + out_file)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+if __name__ == '__main__':
+    metrics("checking_data", "checking/1_lons", "checking/3_performance_metrics", "checking/4_network_metrics", 1000)
+    # metrics("data/data_bays29", "new_results/1_lons", "new_results/3_performance_metrics", "new_results/4_network_metrics", 1000)
